@@ -1,3 +1,148 @@
-h1{
-    color:blue;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+}
+header{
+    background-color:#482ad5;
+    padding: 150px;
+    
+}
+    /* Animated Text */
+.animated-text {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-weight: 900;
+    font-size: 5em;
+    text-align: center;
+}
+    
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav ul li {
+    margin: 0 15px;
+    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    margin: 25px;
+    border-radius: 30px;
+    
+}
+
+#home {
+    background-color: #744af2;
+    padding: 50px 20px;
+    
+}
+.button {
+    background-color: #000000;
+    color: #744af2;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #3219d6;
+    color: #000000;
+}
+    
+
+#about, #servizi{
+    background-color:#744af2;
+    
+}
+#orbit{
+    
+    margin-bottom: 0px;
+    background-color:#744af2;
+
+}
+
+footer {
+    background-color: #3219d6;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    margin-top: black;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    #home {
+        padding: 30px 10px;
+    }
+
+    footer {
+        position: relative;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #home {
+        padding: 20px 5px;
+    }
+
+    section {
+        padding: 5px;
+    }
 }
