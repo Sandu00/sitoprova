@@ -1,207 +1,134 @@
+/* Stile generale */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Merriweather', serif; /* Font elegante */
+    color: #4a2c2a; /* Marrone scuro */
     margin: 0;
     padding: 0;
-    background-color:white;
-}
-header{
-    background-color:#482ad5;
-    padding: 150px;
-    
-}
-    /* Animated Text */
-.animated-text {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    font-weight: 900;
-    font-size: 5em;
-    text-align: center;
-}
-    
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+    background-color: #f5f2eb; /* Beige chiaro */
+    line-height: 1.8;
 }
 
+/* Barra di navigazione */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5e3a2f; /* Marrone intenso */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
+.navbar .logo img {
+    max-width: 120px;
+}
 
 nav {
-    background-color: black;
-    color: white;
-    padding: 30px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center;
-    
+    gap: 1.5rem;
 }
 
-nav ul li {
-    margin: 0 15px;
-    
-}
-
-nav ul li a {
-    color: #fff;
+nav a {
+    color: #f5e0c3; /* Beige caldo */
     text-decoration: none;
     font-weight: bold;
-    
+    font-size: 1rem;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-    
+nav a:hover {
+    color: #ffdda1; /* Giallo tenue */
+    text-shadow: 0 0 8px rgba(255, 221, 161, 0.8);
 }
 
-section {
-    padding: 20px;
-    text-align: center;
-    margin: 25px;
-    border-radius: 30px;
-    
+/* Barra di ricerca */
+.search-bar {
+    display: flex;
+    align-items: center;
 }
 
-#home {
-    background-color: #744af2;
-    padding: 50px 20px;
-    
+.search-bar input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 1rem;
+    color: #4a2c2a; /* Testo marrone scuro */
 }
-.button {
-    background-color: #000000;
-    color: #744af2;
-    border-radius: 10px;
-    padding: 10px 20px;
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    background-color: #d49c6e; /* Marrone tenue */
+    border: none;
+    border-radius: 0 4px 4px 0;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.button:hover {
-    background-color: #3219d6;
-    color: #000000;
-}
-    
-
-#about, #servizi{
-    background-color:#744af2;
-    
-}
-#orbit{
-    
-    margin-bottom: 0px;
-    background-color:#744af2;
-
+.search-bar button:hover {
+    background-color: #b87a4c; /* Marrone più intenso */
+    transform: scale(1.05);
 }
 
-footer {
-    background-color: #3219d6;
+/* Compensare la barra fissa */
+body {
+    margin-top: 70px; /* Altezza della navbar */
+}
+
+/* Sezioni principali */
+main section {
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+main section:hover {
+    transform: translateY(-5px);
+}
+
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    bottom: 0;
-    margin-top: black;
+    padding: 5rem 2rem;
+    font-family: 'Playfair Display', serif; /* Font accattivante per titoli */
+    font-size: 1.2rem;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 10px;
-    }
-
-    #home {
-        padding: 30px 10px;
-    }
-
-    footer {
-        position: relative;
-        padding: 20px 0;
-    }
+main h2 {
+    font-size: 2rem;
+    color: #5e3a2f; /* Marrone intenso */
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-@media (max-width: 480px) {
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    #home {
-        padding: 20px 5px;
-    }
-
-    section {
-        padding: 5px;
-    }
+main p {
+    font-size: 1rem;
+    color: #4a2c2a;
+    line-height: 1.8;
+    text-align: justify;
 }
 
-/* Media Queries per dispositivi mobili */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    .palma, .logo {
-        width: 5cm;
-    }
-
-    .button-container {
-        flex-direction: column;
-    }
-
-    .menu-image {
-        width: 6cm;
-    }
-}
-
-/* Media Queries per smartphone */
-@media (max-width: 480px) {
-    .palma, .logo {
-        width: 100%;
-    }
-
-    .menu-image {
-        width: 5cm;
-    }
-
-    body {
-        padding: 10px;
-    }
-
-    .fixed-element {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        background-color: lightgray;
-        padding: 10px;
-        border-radius: 5px;
-        z-index: 1000;
-    }
-
-    .content {
-        height: 2000px; 
-        padding-top: 150px;
-    }
-
-    .scroll-image {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        background-position: center;
-        background-size: cover;
-        top: 0;
-        left: 0;
-    }
+/* Footer */
+footer {
+    background-color: #5e3a2f;
+    color: #f5e0c3; /* Beige caldo */
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-family: 'Merriweather', serif;
 }
