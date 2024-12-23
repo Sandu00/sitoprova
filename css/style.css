@@ -1,10 +1,10 @@
 /* Stile generale */
 body {
-    font-family: 'Merriweather', serif; /* Font elegante */
-    color: #4a2c2a; /* Marrone scuro */
+    font-family: 'Merriweather', serif;
+    color: #4a2c2a;
     margin: 0;
     padding: 0;
-    background-color: #f5f2eb; /* Beige chiaro */
+    background-color: #f5f2eb;
     line-height: 1.8;
 }
 
@@ -14,7 +14,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #5e3a2f; /* Marrone intenso */
+    background-color: #5e3a2f;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ nav {
 }
 
 nav a {
-    color: #f5e0c3; /* Beige caldo */
+    color: #f5e0c3;
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -42,7 +42,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffdda1; /* Giallo tenue */
+    color: #ffdda1;
     text-shadow: 0 0 8px rgba(255, 221, 161, 0.8);
 }
 
@@ -58,12 +58,12 @@ nav a:hover {
     border-radius: 4px 0 0 4px;
     outline: none;
     font-size: 1rem;
-    color: #4a2c2a; /* Testo marrone scuro */
+    color: #4a2c2a;
 }
 
 .search-bar button {
     padding: 0.5rem 1rem;
-    background-color: #d49c6e; /* Marrone tenue */
+    background-color: #d49c6e;
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
@@ -74,13 +74,13 @@ nav a:hover {
 }
 
 .search-bar button:hover {
-    background-color: #b87a4c; /* Marrone più intenso */
+    background-color: #b87a4c;
     transform: scale(1.05);
 }
 
 /* Compensare la barra fissa */
 body {
-    margin-top: 70px; /* Altezza della navbar */
+    margin-top: 70px;
 }
 
 /* Sezioni principali */
@@ -103,14 +103,14 @@ main section:hover {
     color: #fff;
     text-align: center;
     padding: 5rem 2rem;
-    font-family: 'Playfair Display', serif; /* Font accattivante per titoli */
+    font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
 main h2 {
     font-size: 2rem;
-    color: #5e3a2f; /* Marrone intenso */
+    color: #5e3a2f;
     font-family: 'Playfair Display', serif;
     text-align: center;
     margin-bottom: 1rem;
@@ -126,7 +126,7 @@ main p {
 /* Footer */
 footer {
     background-color: #5e3a2f;
-    color: #f5e0c3; /* Beige caldo */
+    color: #f5e0c3;
     text-align: center;
     padding: 1.5rem 0;
     margin-top: 2rem;
