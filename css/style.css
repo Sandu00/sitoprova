@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-color: #f5f2eb;
     line-height: 1.8;
+    margin-top: 70px;
 }
 
 /* Barra di navigazione */
@@ -24,7 +25,12 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.navbar .logo img {}
+.navbar .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
 
 .home-logo{
     width: 50px;
@@ -60,7 +66,6 @@ nav a:hover {
     border: none;
     border-radius: 4px 0 0 4px;
     outline: none;
-    font-size: 1rem;
     color: #4a2c2a;
 }
 
