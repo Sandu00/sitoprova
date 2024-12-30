@@ -1,12 +1,25 @@
+/* Definizione delle variabili CSS */
+:root {
+    --font-family-primary: 'Merriweather', serif;
+    --font-family-secondary: 'Playfair Display', serif;
+    --color-primary: #4a2c2a;
+    --color-secondary: #5e3a2f;
+    --color-accent: #f5e0c3;
+    --color-background: #f5f2eb;
+    --color-hover: #ffdda1;
+    --color-button: #d49c6e;
+    --color-button-hover: #b87a4c;
+}
+
 /* Stile generale */
 body {
-    font-family: 'Merriweather', serif;
-    color: #4a2c2a;
+    font-family: var(--font-family-primary);
+    color: var(--color-primary);
     margin: 0;
     padding: 0;
-    background-color: #f5f2eb;
+    background-color: var(--color-background);
     line-height: 1.8;
-    margin-top: 70px;
+    margin-top: 70px; /* Compensare la barra fissa */
 }
 
 /* Barra di navigazione */
@@ -15,7 +28,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #5e3a2f;
+    background-color: var(--color-secondary);
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -32,7 +45,7 @@ body {
     margin-right: 1rem;
 }
 
-.home-logo{
+.home-logo {
     width: 50px;
     height: 50px;
 }
@@ -43,7 +56,7 @@ nav {
 }
 
 nav a {
-    color: #f5e0c3;
+    color: var(--color-accent);
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -51,8 +64,38 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffdda1;
+    color: var(--color-hover);
     text-shadow: 0 0 8px rgba(255, 221, 161, 0.8);
+}
+
+/* Dropdown menu */
+.navbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5e3a2f;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navbar .dropdown-content a {
+    color: #f5e0c3;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: #b87a4c;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Barra di ricerca */
@@ -71,7 +114,7 @@ nav a:hover {
 
 .search-bar button {
     padding: 0.5rem 1rem;
-    background-color: #d49c6e;
+    background-color: var(--color-button);
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
@@ -82,13 +125,8 @@ nav a:hover {
 }
 
 .search-bar button:hover {
-    background-color: #b87a4c;
+    background-color: var(--color-button-hover);
     transform: scale(1.05);
-}
-
-/* Compensare la barra fissa */
-body {
-    margin-top: 70px;
 }
 
 /* Sezioni principali */
@@ -106,46 +144,171 @@ main section:hover {
     transform: translateY(-5px);
 }
 
-.hero {
-    background: url('hero.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 5rem 2rem;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+/* Aggiungi questa classe per le sezioni delle sottopagine */
+.section_sottopagina {
+    transition: none; /* Rimuove l'effetto hover */
 }
 
-main h2 {
-    font-size: 2rem;
-    color: #5e3a2f;
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    margin-bottom: 1rem;
+.section_sottopagina:hover {
+    transform: none; /* Assicura che non ci sia trasformazione */
 }
 
-main p {
-    font-size: 1rem;
-    color: #4a2c2a;
-    line-height: 1.8;
+.titolo_sottopagina{
+    font-family: var(--font-family-secondary);
+    color: var(--color-secondary);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.testo_sottopagina{
+    font-family: var(--font-family-primary);
+    color: var(--color-primary);
     text-align: justify;
 }
 
 /* Footer */
 footer {
-    background-color: #5e3a2f;
-    color: #f5e0c3;
+    background-color: var(--color-secondary);
+    color: var(--color-accent);
     text-align: center;
     padding: 1.5rem 0;
     margin-top: 2rem;
-    font-family: 'Merriweather', serif;
+    font-family: var(--font-family-primary);
 }
 
-
-section a{
+section a {
     color: #5e3a2f;
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
     transition: color 0.3s, text-shadow 0.3s;
 }
+
+.index_img_sx, .index_img_dx {
+    width: 48%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}  
+
+
+/* Aggiungi uno stile per contenere le immagini */
+.image-container {
+    overflow: hidden; /* Assicurati che le immagini non escano dal contenitore */
+    display: flex;
+    flex-wrap: wrap; /* Permetti alle immagini di andare su più righe se necessario */
+}
+
+/* Clearfix per il contenitore delle immagini */
+.image-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Stile per posizionare l'immagine */
+.image-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1rem; /* Aggiungi un margine per evitare che tocchi i bordi */
+}
+
+/* Assicurati che la sezione abbia una posizione relativa */
+.section-relative {
+    position: relative;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .search-bar input {
+        width: 80%;
+    }
+
+    .search-bar button {
+        width: 20%;
+    }
+
+    .main_section {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional responsive styles for smaller screens */
+@media (max-width: 480px) {
+    body {
+        margin-top: 90px; /* Adjust margin-top for smaller screens */
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .search-bar input {
+        width: 70%;
+    }
+
+    .search-bar button {
+        width: 30%;
+    }
+
+    main section {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .section_sottopagina {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    main h2 {
+        font-size: 1.2rem;
+    }
+
+    main p {
+        font-size: 0.8rem;
+    }
+
+    
+}
+

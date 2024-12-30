@@ -22,4 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
             section.style.display = content.includes(query) ? 'block' : 'none';
         });
     });
+
+    // Funzionalità per la navbar mobile
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
 });
