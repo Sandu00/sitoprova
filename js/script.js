@@ -27,7 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navbar = document.querySelector('.navbar');
 
-    menuToggle.addEventListener('click', () => {
+    const toggleNavbar = () => {
         navbar.classList.toggle('active');
-    });
+    };
+
+    menuToggle.addEventListener('click', toggleNavbar);
+    menuToggle.addEventListener('touchstart', toggleNavbar); // Add touchstart event listener
 });
